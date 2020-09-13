@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Парсер</title>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+<body>
+    <div class="content">
+        <div class="row">
+            <div class="column">
+                <label for="upload_file">
+                    <input type="file" id="upload_file" id="file" name="file" accept="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet">
+                    Начать парсинг
+                </label>
+            </div>
+            <div class="column"><button>Остановить парсинг</button></div>
+            <div class="column"><button>Скачать файл</button></div>
+        </div>
+        <div class="row"><div id="progress_bar">Ожидание действий пользователя</div></div>
+        <div class="row overflow_row scrollStyle">
+            <table>
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Наименование товара</th>
+                        <th>Тип алгоритма</th>
+                        <th>Средняя цена</th>
+                        <th>Медиана</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+    </div>
+    <script src="/javascripts/jquery.min.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/javacripts/scripts.js"></script>
+</body>
+</html>
